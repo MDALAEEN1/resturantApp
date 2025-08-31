@@ -118,7 +118,7 @@ class _RestaurantMealPageState extends State<RestaurantMealPage> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(
-            "تمت الإضافة إلى السلة 🛒 (${selectedSize.name}) - ${selectedSize.price} دينار",
+            "تمت الإضافة إلى السلة 🛒 (${selectedSize.name}) - ${selectedSize.price} jd",
           ),
           backgroundColor: Colors.green,
           duration: const Duration(seconds: 2),
@@ -149,7 +149,7 @@ class _RestaurantMealPageState extends State<RestaurantMealPage> {
           return [
             SliverAppBar(
               expandedHeight: 280,
-              pinned: true,
+              pinned: false,
               elevation: 0,
               title: innerBoxIsScrolled
                   ? Text(
@@ -222,7 +222,7 @@ class _RestaurantMealPageState extends State<RestaurantMealPage> {
         child: _isLoading
             ? const CircularProgressIndicator(color: Colors.white)
             : Text(
-                "اطلب الآن • ${selectedSize.price.toStringAsFixed(2)} دينار",
+                "Order now • ${selectedSize.price.toStringAsFixed(2)} jd",
                 style: const TextStyle(fontSize: 18, color: Colors.white),
               ),
       ),
@@ -286,7 +286,7 @@ class _RestaurantMealPageState extends State<RestaurantMealPage> {
 
             // اختيار الحجم
             const Text(
-              "اختر الحجم",
+              "Choose size",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
@@ -294,7 +294,7 @@ class _RestaurantMealPageState extends State<RestaurantMealPage> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: widget.sizes.map((mealSize) {
                 return ChoiceChip(
-                  label: Text("${mealSize.name} (${mealSize.price} دينار)"),
+                  label: Text("${mealSize.name} (${mealSize.price} jd)"),
                   selected: selectedSize.name == mealSize.name,
                   onSelected: (_) {
                     setState(() {
@@ -315,7 +315,7 @@ class _RestaurantMealPageState extends State<RestaurantMealPage> {
 
             // Instructions
             const Text(
-              "عن هذا الطبق",
+              "About this dish",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
@@ -327,7 +327,7 @@ class _RestaurantMealPageState extends State<RestaurantMealPage> {
 
             // Ingredients
             const Text(
-              "المكونات",
+              "components",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),

@@ -161,10 +161,8 @@ class _CartGridState extends State<CartGrid> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => CheckoutFormPage(
-                            totalAmount: totalAmount,
-                            cartId: _cartId!,
-                          ),
+                          builder: (context) =>
+                              RestaurantCheckoutPage(cartId: _cartId!),
                         ),
                       );
                     },

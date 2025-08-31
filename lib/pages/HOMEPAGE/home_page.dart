@@ -47,38 +47,20 @@ class FoodHomePage extends StatelessWidget {
                         },
                       ),
                       const SizedBox(width: 12),
-                      Stack(
-                        children: [
-                          IconButton(
-                            icon: const Icon(
-                              Icons.shopping_bag_outlined,
-                              color: Colors.red,
-                              size: 30,
+                      IconButton(
+                        icon: const Icon(
+                          Icons.shopping_bag_outlined,
+                          color: Colors.red,
+                          size: 30,
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MyOrderPage(),
                             ),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => MyOrderPage(),
-                                ),
-                              );
-                            },
-                          ),
-                          Positioned(
-                            right: 0,
-                            child: CircleAvatar(
-                              radius: 8,
-                              backgroundColor: Colors.red,
-                              child: const Text(
-                                "0",
-                                style: TextStyle(
-                                  fontSize: 10,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
+                          );
+                        },
                       ),
                     ],
                   ),
