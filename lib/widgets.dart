@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'dart:async';
-
+import 'package:resturantapp/auth/loginpage.dart';
 import 'package:resturantapp/pages/HOMEPAGE/home_page.dart';
+
+import 'dart:async';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -26,10 +28,25 @@ class _SplashScreenState extends State<SplashScreen>
     ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeOut));
     _controller.forward();
 
-    Timer(Duration(seconds: 3), () {
-      Navigator.of(
-        context,
-      ).pushReplacement(MaterialPageRoute(builder: (_) => FoodHomePage()));
+    // هنا نستدعي الدالة عشان تفحص حالة تسجيل الدخول
+    checkUser();
+  }
+
+  void checkUser() {
+    User? user = FirebaseAuth.instance.currentUser;
+
+    Future.delayed(Duration(seconds: 3), () {
+      if (user != null) {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => FoodHomePage()),
+        );
+      } else {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => LoginPage()),
+        );
+      }
     });
   }
 
@@ -45,10 +62,7 @@ class _SplashScreenState extends State<SplashScreen>
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [
-              Color(0xFFFFFFFF),
-              Color(0xFFF2F2F2),
-            ], // أبيض فاتح إلى أبيض رمادي
+            colors: [Color(0xFFFFFFFF), Color(0xFFF2F2F2)],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
@@ -63,7 +77,6 @@ class _SplashScreenState extends State<SplashScreen>
                   "images/d797705758050aa1b2c18410a7ec5c6c.png",
                   scale: 3.5,
                 ),
-
                 FadeTransition(
                   opacity: _controller,
                   child: Text(

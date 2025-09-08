@@ -64,7 +64,7 @@ class _CartGridState extends State<CartGrid> {
         }
 
         if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
-          return const Center(child: Text("سلة الشراء فارغة"));
+          return Center(child: Image.asset("images/Emptyyy.gif"));
         }
 
         final allItems = snapshot.data!.docs;
