@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:resturantapp/generated/l10n.dart';
 import 'package:resturantapp/pages/SEARCHPAGE/widgets/DataFromFirebase_ForCatagory.dart';
 import 'package:resturantapp/pages/SEARCHPAGE/widgets/search_page_coustem.dart';
 
@@ -36,8 +37,8 @@ class SearchPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                const Text(
-                  "Search product",
+                Text(
+                  S.of(context).Search_product,
                   style: TextStyle(
                     color: Colors.red,
                     fontWeight: FontWeight.bold,

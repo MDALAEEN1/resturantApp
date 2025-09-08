@@ -26,10 +26,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -53,10 +50,22 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyD7ANZ1_lX8f3tbCxMU8-rsvfduj7laUVU',
-    appId: '1:391493864907:android:7576408e31cb1b40dcfa4e',
-    messagingSenderId: '391493864907',
-    projectId: 'resturantapp-f0480',
-    storageBucket: 'resturantapp-f0480.firebasestorage.app',
+    apiKey: 'AIzaSyCDSoG4bLV81Y-ONZHpbNiXBLnIsA599l0',
+    appId: '1:739131917133:android:4b0bee9cc75a441bbced04',
+    messagingSenderId: '739131917133',
+    projectId: 'fineeeeeshhh',
+    databaseURL: 'https://fineeeeeshhh-default-rtdb.europe-west1.firebasedatabase.app',
+    storageBucket: 'fineeeeeshhh.firebasestorage.app',
   );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyC2EU2MLLTLsA6Bd2ZuhktSzqfx9UgCLes',
+    appId: '1:739131917133:ios:45821c4746e5bbe5bced04',
+    messagingSenderId: '739131917133',
+    projectId: 'fineeeeeshhh',
+    databaseURL: 'https://fineeeeeshhh-default-rtdb.europe-west1.firebasedatabase.app',
+    storageBucket: 'fineeeeeshhh.firebasestorage.app',
+    iosBundleId: 'com.example.resturantapp',
+  );
+
 }

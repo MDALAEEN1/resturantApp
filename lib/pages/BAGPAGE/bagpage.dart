@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:resturantapp/generated/l10n.dart';
 import 'package:resturantapp/pages/BAGPAGE/widgets/DataFromFireBase_orders.dart';
 
 class MyOrderPage extends StatefulWidget {
@@ -12,7 +13,7 @@ class _MyOrderPageState extends State<MyOrderPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "my orders".toUpperCase(),
+          S.of(context).myorders.toUpperCase(),
           style: const TextStyle(
             color: Colors.red,
             fontWeight: FontWeight.bold,

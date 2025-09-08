@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:resturantapp/generated/l10n.dart';
 
 class TitleAndCart extends StatefulWidget {
   const TitleAndCart({super.key});
@@ -99,7 +100,7 @@ class _TitleAndCartState extends State<TitleAndCart>
               scale: value,
               child: RichText(
                 text: TextSpan(
-                  text: "Looking for your\n",
+                  text: '${S.of(context).looking_for_your}\n',
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 28,
@@ -107,7 +108,7 @@ class _TitleAndCartState extends State<TitleAndCart>
                   ),
                   children: [
                     TextSpan(
-                      text: "   Favourite Meal?",
+                      text: '${S.of(context).FavouriteMeal}\n',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 36,

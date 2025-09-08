@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:resturantapp/generated/l10n.dart';
+import 'package:resturantapp/pages/HOMEPAGE/widgets/drawer/pages/settings/SettingsPage.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -34,15 +36,20 @@ class CustomDrawer extends StatelessWidget {
             ),
 
             // 🟦 العناصر في القائمة
-            drawerItem(Icons.store, "Market"),
-            drawerItem(Icons.category, "Categories"),
-            drawerItem(Icons.shopping_cart, "My Cart", badge: "2"),
-            drawerItem(Icons.visibility, "Watch List", badge: "5"),
-            drawerItem(Icons.rss_feed, "Feed"),
-            drawerItem(Icons.photo, "Gallery"),
-            drawerItem(Icons.settings, "Settings"),
-            drawerItem(Icons.logout, "Logout"),
+            drawerItem(
+              context,
+              Icons.settings,
+              S.of(context).Settings,
+              (context) => SettingsPage(),
+            ),
 
+            //drawerItem(Icons.category, "Categories"),
+            //drawerItem(Icons.shopping_cart, "My Cart", badge: "2"),
+            //drawerItem(Icons.visibility, "Watch List", badge: "5"),
+            //drawerItem(Icons.rss_feed, "Feed"),
+            //drawerItem(Icons.photo, "Gallery"),
+            //drawerItem(Icons.settings, "Settings"),
+            //drawerItem(Icons.logout, "Logout"),
             const Spacer(),
 
             // 🟦 نسخة التطبيق في الأسفل
@@ -60,7 +67,13 @@ class CustomDrawer extends StatelessWidget {
   }
 
   // 🟦 عنصر مخصص للDrawer
-  Widget drawerItem(IconData icon, String title, {String? badge}) {
+  Widget drawerItem(
+    BuildContext context,
+    IconData icon,
+    String title,
+    WidgetBuilder ontap, {
+    String? badge,
+  }) {
     return ListTile(
       leading: Stack(
         children: [
@@ -84,7 +97,9 @@ class CustomDrawer extends StatelessWidget {
         ],
       ),
       title: Text(title, style: const TextStyle(color: Colors.white)),
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: ontap));
+      },
     );
   }
 }

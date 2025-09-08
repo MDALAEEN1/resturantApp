@@ -1,13 +1,33 @@
 {
   "project_info": {
-    "project_number": "391493864907",
-    "project_id": "resturantapp-f0480",
-    "storage_bucket": "resturantapp-f0480.firebasestorage.app"
+    "project_number": "739131917133",
+    "firebase_url": "https://fineeeeeshhh-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "fineeeeeshhh",
+    "storage_bucket": "fineeeeeshhh.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:391493864907:android:7576408e31cb1b40dcfa4e",
+        "mobilesdk_app_id": "1:739131917133:android:30db441db59aea2dbced04",
+        "android_client_info": {
+          "package_name": "com.example.quickstockqrcode"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDSoG4bLV81Y-ONZHpbNiXBLnIsA599l0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739131917133:android:4b0bee9cc75a441bbced04",
         "android_client_info": {
           "package_name": "com.example.resturantapp"
         }
@@ -15,7 +35,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyD7ANZ1_lX8f3tbCxMU8-rsvfduj7laUVU"
+          "current_key": "AIzaSyCDSoG4bLV81Y-ONZHpbNiXBLnIsA599l0"
         }
       ],
       "services": {

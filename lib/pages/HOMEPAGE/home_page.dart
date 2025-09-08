@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:resturantapp/generated/l10n.dart';
 import 'package:resturantapp/pages/BAGPAGE/bagpage.dart';
 import 'package:resturantapp/pages/HOMEPAGE/widgets/drawer/drawerpage.dart';
 import 'package:resturantapp/pages/HOMEPAGE/widgets/title_and_cart.dart';
@@ -43,7 +44,7 @@ class FoodHomePage extends StatelessWidget {
                           },
                         ),
                         Text(
-                          "restaurant".toUpperCase(),
+                          S.of(context).restaurant.toUpperCase(),
                           style: const TextStyle(
                             color: Colors.red,
                             fontWeight: FontWeight.bold,
@@ -105,7 +106,7 @@ class FoodHomePage extends StatelessWidget {
                     const TitleAndCart(),
                     const SizedBox(height: 15),
                     Text(
-                      "Menu",
+                      S.of(context).Menu,
                       style: const TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,

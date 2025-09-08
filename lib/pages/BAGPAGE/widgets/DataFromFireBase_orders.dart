@@ -155,9 +155,7 @@ class _CartGridState extends State<CartGrid> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      double totalAmount = calculateTotal(
-                        allItems,
-                      ); // استخدم المجموع الكلي المحسوب
+                      // استخدم المجموع الكلي المحسوب
                       Navigator.push(
                         context,
                         MaterialPageRoute(

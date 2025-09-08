@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:resturantapp/generated/l10n.dart';
 import 'package:resturantapp/pages/MEALPAGE/meal_page.dart';
 
 class SimpleSearchWidget extends StatefulWidget {
@@ -185,7 +186,7 @@ class _SimpleSearchWidgetState extends State<SimpleSearchWidget> {
           focusNode: _focusNode,
           textDirection: TextDirection.ltr,
           decoration: InputDecoration(
-            hintText: "Search for a dish or meal",
+            hintText: S.of(context).Search_for_a_dish_or_meal,
             border: InputBorder.none,
             suffixIcon: Container(
               margin: const EdgeInsets.all(4),
